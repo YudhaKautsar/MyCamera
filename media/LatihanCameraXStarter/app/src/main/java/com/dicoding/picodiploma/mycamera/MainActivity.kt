@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun uploadImage() {
         if (getFile != null) {
-            val file = getFile
+            val file = reduceFileImage(getFile)
 
             val description =
                 "Ini adalah deskripsi gambar".toRequestBody("text/plain".toMediaType())
@@ -187,5 +187,4 @@ class MainActivity : AppCompatActivity() {
             binding.previewImageView.setImageURI(selectedImg)
         }
     }
-
 }
